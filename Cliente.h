@@ -44,10 +44,10 @@ public:
 		ConexionBD cn = ConexionBD();
 
 		cn.abrir_conexion();
-		string i = to_string(id);
+		string ii = to_string(id);
 		if (cn.getConectar()) {
 			string  borrar =
-				"delete from clientes  where id_cliente = " + i + "";
+				"delete from clientes  where id_cliente = " + ii + "";
 			const char* i = borrar.c_str();
 			// executar el query
 			q_estado = mysql_query(cn.getConectar(), i);
@@ -69,10 +69,10 @@ public:
 
 		cn.abrir_conexion();
 		string t = to_string(telefono);
-		string i = to_string(id);
+		string ii = to_string(id);
 		if (cn.getConectar()) {
 			string  actualizar =
-				"update clientes set nit = '" + nit + "', nombres='" + nombres + "', apellidos = '" + apellidos + "', direccion = '" + direccion + "', telefono =" + t + ", fecha_nacimiento='" + fecha_nacimiento + "' where id_cliente = " + i +"";
+				"update clientes set nit = '" + nit + "', nombres='" + nombres + "', apellidos = '" + apellidos + "', direccion = '" + direccion + "', telefono =" + t + ", fecha_nacimiento='" + fecha_nacimiento + "' where id_cliente = " + ii +"";
 			const char* i = actualizar.c_str();
 			// executar el query
 			q_estado = mysql_query(cn.getConectar(), i);
