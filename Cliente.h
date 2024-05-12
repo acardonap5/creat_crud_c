@@ -52,7 +52,7 @@ public:
 			// executar el query
 			q_estado = mysql_query(cn.getConectar(), i);
 			if (!q_estado) {
-				cout << "Actualizacion Exitosa ..." << endl;
+				cout << "Eliminacion Exitosa ..." << endl;
 			}
 			else {
 				cout << " xxx Error al Ingresar  xxx" << endl;
